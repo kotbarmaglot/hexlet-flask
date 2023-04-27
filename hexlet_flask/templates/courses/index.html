@@ -1,12 +1,16 @@
-<table>
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+    <a href="/courses/new">New course</a>
+    <ul>
     {% for course in courses %}
-    <tr>
-      <td>
-          {{ course.id }}
-      </td>
-      <td>
-          {{ course.name }}
-      </td>
-    </tr>
-    {% endfor %}
-</table>
+    <li>Title: {{ course['title'] }}</li>
+      {% endfor %}
+    </ul>
+
+    {{user}}
+  </body>
+</html>
